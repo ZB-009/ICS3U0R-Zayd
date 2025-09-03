@@ -7,7 +7,4 @@ Welcome to my ICS3U portfolio. I’ll use this site to post my work and reflecti
 - 📝 Blog/Reflection: [Reflection #1](./posts/first_reflection.md)
 
 ## About me
-A short intro (interests, goals, tools I’m learning).
-
----
-*Update this page by editing `index.md` in your repository.*
+I am from Palestine, I play soccer, and I am in ICS3U
