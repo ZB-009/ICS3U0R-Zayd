@@ -7,4 +7,4 @@ Welcome to my ICS3U portfolio. I’ll use this site to post my work and reflecti
 - 📝 Blog/Reflection: [Reflection #1](./posts/first_reflection.md)
 
 ## About me
-I am from Palestine, I play soccer, and I am in ICS3U
+I am from Palestine, I play soccer, and I am in ICS3U.
