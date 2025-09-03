@@ -1,4 +1,4 @@
-# Portfolio-template
+# Zayd's Portfolio
 This is a Portfolio Template - to be used by students taking Ms. Kim's ICS3U OR ICS4U.
 
 Welcome! This is your starting point for creating your GitHub Pages portfolio.  
