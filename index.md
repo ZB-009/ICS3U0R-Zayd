@@ -11,4 +11,4 @@ Welcome to my ICS3U portfolio. I’ll use this site to post my work and reflecti
 I am from Palestine, I play soccer, and I am in ICS3U.
 
 ## Experience
-I have some experience in Python coding.
+I have some experience in Python.
