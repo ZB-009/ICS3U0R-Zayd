@@ -7,4 +7,4 @@
 - Next steps:
 
 Presentation: 
-![One of my slides from the presenation.](https://github.com/user-attachments/assets/5ee2d2db-a44b-4042-870c-a21ce63eda54 " One of my slides from the presentation.")
+![One of my slides from the presenation](https://github.com/user-attachments/assets/06cad70a-ee16-4d1b-a890-94c62529ddd6 "One of my slides from the presentation.")
