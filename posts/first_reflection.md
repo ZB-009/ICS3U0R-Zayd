@@ -7,4 +7,4 @@
 - Next steps:
 
 Presentation: 
-![One of my slides from the presenation.](<img width="850" height="479" alt="image" src="https://github.com/user-attachments/assets/5ee2d2db-a44b-4042-870c-a21ce63eda54" /> "One of my slides from the presentation.")
+![One of my slides from the presenation.](https://github.com/user-attachments/assets/5ee2d2db-a44b-4042-870c-a21ce63eda54 " One of my slides from the presentation.")
