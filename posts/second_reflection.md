@@ -14,16 +14,18 @@
 ## Learning Log 4
 ### January 17, 2026
 #### I have 5 different arrays used for storing the values of the robber’s X and Y values, the cookie’s X and Y values, and to check if the different cookies are alive. The array, cookieAlive, that stores boolean values, is used first to store if a cookie exists or not, then check if there is a collision between the player and the cookie, making the value of cookieAlive[i] false.
-#### void drawCookies() {
-####  for (int i = 0; i<numCookies; i++) {
-####    if (cookieAlive[i]) {
-####      image(cookie, cookieX[i], cookieY[i], cSize, cSize);
-####      if (cookieCollision(pX, pY, pSize, cookieX[i], cookieY[i], cSize)) {
-####        cookieAlive[i] = false;
-####      }
-####    }
-####  }
-#### }
+```
+ void drawCookies() {
+  for (int i = 0; i<numCookies; i++) {
+    if (cookieAlive[i]) {
+      image(cookie, cookieX[i], cookieY[i], cSize, cSize);
+      if (cookieCollision(pX, pY, pSize, cookieX[i], cookieY[i], cSize)) {
+        cookieAlive[i] = false;
+      }
+    }
+  }
+ }
+```
 #### While attempting to remove cookies after they collided with the Cookie Monster, I ran into many issues actually removing them, and after trying a single boolean, which only made one of the three cookies disappear, I decided to make the variable an array, which worked and made all the cookies disappear on collision.
 
 ## Learning Log 5
