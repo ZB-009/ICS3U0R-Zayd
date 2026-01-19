@@ -31,45 +31,47 @@
 ## Learning Log 5
 ### January 18, 2026
 #### Throughout my code, I created many custom functions, most importantly of which are the various start game methods, the movement methods, and the methods that spawn the robber and cookies. 
-| Method Name | void startGame()                             | void movePlayerRight()     | void robberLevel() |
-|             |                                              | void movePlayerLeft()      | void drawCookies() |
-|-------------|----------------------------------------------|----------------------------|:------------------:|
-| Code Snippet| void startGame() {                           | void movePlayerRight() {   | void robberLevel() {
-|             |    textSize(100);                            |  if (pX < width - pSize) { |   rSize = 100;
-|             |   fill(255);                                 |    pX += pMove;            |   if (startDone && !cookiesPlaced) {
-|             |   if (startButton) {                         |  }                         |     for (int i = 0; i < numCookies; i++) {
-|             |     text("START", width/2-150, height/2);    | }                          |       cookieX[i] = rX[i+3];
-|             |   }                                          |                            |       cookieY[i] = rY[i+3];
-|             |   if (howButton) {                           | void movePlayerLeft() {    |       cookieAlive[i] = true;
-|             |     fill(0);                                 |   if (pX > 0) {            |     }
-|             |     rect(width-100, height-125, 75, 100, 10);|     pX -= pMove;           |     cookiesPlaced = true;
-|             |     fill(255);                               |   }                        |     drawPlayer = true;
-|             |     text("?", width-85, height-40);          | }                          |   }
-|             |   }                                          |                            | }
-|             |   if (!jarCollision) {                       |                            |
-|             |     image(jar, jX, jY, jSize, jSize);        |                            | void drawCookies() { 
-|             |   }                                          |                            |   
-|             | }     `                                      |                            |
-|             |                                              |                            |
-|             |                                              |                            |
-|             |                                              |                            |
-|             |                                              |                            |
-|             |                                              |                            |
-|             |                                              |                            |
-|             |                                              |
-|             |                                              |
-|             |                                              |
-|             |                                              |
-|             |                                              |
-|             |
-|             |
-|             |
-|             |
-|             |
-|             |
-|             |
-|             |
-|             |
-|             |
-|             |
-|             |
+
+| Method Name | void startGame()                             | void movePlayerRight()     | void robberLevel()                                                         |
+|             |                                              | void movePlayerLeft()      | void drawCookies()                                                         |
+|-------------|----------------------------------------------|----------------------------|:--------------------------------------------------------------------------:|
+| Code Snippet|                                              |                            |                                                                            |
+|             | void startGame() {                           | void movePlayerRight() {   | void robberLevel() {                                                       |
+|             |    textSize(100);                            |  if (pX < width - pSize) { |   rSize = 100;                                                             |
+|             |   fill(255);                                 |    pX += pMove;            |   if (startDone && !cookiesPlaced) {                                       |
+|             |   if (startButton) {                         |  }                         |     for (int i = 0; i < numCookies; i++) {                                 |
+|             |     text("START", width/2-150, height/2);    | }                          |       cookieX[i] = rX[i+3];                                                |
+|             |   }                                          |                            |       cookieY[i] = rY[i+3];                                                |
+|             |   if (howButton) {                           | void movePlayerLeft() {    |       cookieAlive[i] = true;                                               |
+|             |     fill(0);                                 |   if (pX > 0) {            |     }                                                                      |
+|             |     rect(width-100, height-125, 75, 100, 10);|     pX -= pMove;           |     cookiesPlaced = true;                                                  |
+|             |     fill(255);                               |   }                        |     drawPlayer = true;                                                     |
+|             |     text("?", width-85, height-40);          | }                          |   }                                                                        |
+|             |   }                                          |                            | }                                                                          |
+|             |   if (!jarCollision) {                       |                            |                                                                            |
+|             |     image(jar, jX, jY, jSize, jSize);        |                            | void drawCookies() {                                                       |
+|             |   }                                          |                            |    for (int i = 0; i<numCookies; i++) {                                    |
+|             | }                                            |                            |      if (cookieAlive[i]) {                                                 |
+|             |                                              |                            |        image(cookie, cookieX[i], cookieY[i], cSize, cSize);                |
+|             |                                              |                            |        if (cookieCollision(pX, pY, pSize, cookieX[i], cookieY[i], cSize)) {|
+|             |                                              |                            |          cookieAlive[i] = false;                                           |
+|             |                                              |                            |        }                                                                   |
+|             |                                              |                            |      }                                                                     |
+|             |                                              |                            |    }                                                                       |
+|             |                                              |                            |  }                                                                         |
+|             |                                              |                            |                                                                            | 
+|-------------|----------------------------------------------|----------------------------|:--------------------------------------------------------------------------:|
+| Explanation | This method is used to draw the buttons and  | Although the code is very  | These two methods draw the cookies and check to see if the player has      |
+|             | jar on screen while the if statement returns | simple, these methods are  | collided with them to then increase score. These methods also gave me      |
+|             | true. The startButton variable is used to    | arguably the most important| issues, so to fix them I used the same strategy to find the problem. I put |
+|             | check if the start button has been clicked,  | part of my entire code.    | println(random(100)) again in different parts of the methods to find any   |
+|             | and is true until that occurs, same with the | Without them, my game would| bugs, and then solved them quickly.                                        |
+|             | how to play button. The jar on the other hand| be impossible, because the |                                                                            |
+|             | only draws when it has not collided with the | player would not be able to|                                                                            |
+|             | robber. It took me a while to get the        | move. The two restrictions |                                                                            |
+|             | booleans working, so to check it, in each    | in these methods ensure the|                                                                            |
+|             | code, I added println(random(100)), so that I| player completely stays in |                                                                            |
+|             | would be able to see if the code was running | the canvas, avoiding the   |                                                                            |
+|             | or not.                                      | issue of a player leaving  |                                                                            |
+|             |                                              | the screen.                |                                                                            |
+|-------------|----------------------------------------------|----------------------------|:--------------------------------------------------------------------------:|
